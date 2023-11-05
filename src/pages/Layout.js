@@ -57,7 +57,10 @@ function Layout() {
             <div id="page">
                 <Outlet/>
             </div>
-            <p id="footer">This is a Footer</p>
+            <div id="footer">
+                <p>SBHS Robotics</p>
+                <p>750SBCREW</p>
+            </div>
         </div>
     );
 }

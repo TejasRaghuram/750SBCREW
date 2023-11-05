@@ -58,8 +58,9 @@ function Layout() {
                 <Outlet/>
             </div>
             <div id="footer">
-                <p>SBHS Robotics</p>
-                <p>750SBCREW</p>
+                <div id="footer_separation"/>
+                <p id="footer_sbhs">SBHS ROBOTICS</p>
+                <p id="footer_sbcrew">750SBCREW</p>
             </div>
         </div>
     );

@@ -2,7 +2,7 @@ import React from "react";
 
 function Sponsor() {
     return (
-        <div>
+        <div class="page">
             <p>This is the Sponsor Page</p>
         </div>
     );

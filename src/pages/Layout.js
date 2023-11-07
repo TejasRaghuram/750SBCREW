@@ -53,6 +53,7 @@ function Layout() {
 
     return (
         <div>
+            <div id="top_gradient" />
             <div id="background" style={{ left: background_left }}>
                 { background }
             </div>

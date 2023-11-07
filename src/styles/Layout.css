@@ -71,6 +71,15 @@
     margin-left: 70px;
 }
 
+#top_gradient { 
+    width: calc((100vw - 70px) * 0.75);
+    height: 500px;
+    position: fixed;
+    top: -250px;
+    left: calc(70px + (100vw - 70px) * 0.125);
+    background: radial-gradient(closest-side, rgba(210, 190, 100, 0.25), transparent);
+}
+
 .background_dot {
     width: 4px;
     height: 4px;
@@ -174,6 +183,20 @@
     #navbar_viking {
         left: calc(100vw - 60px);
         bottom: 10px;   
+    }
+
+    #page {
+        width: 100vw;
+        margin-left: 0;
+    }
+
+    #top_gradient { 
+        width: 100vw;
+        height: 500px;
+        position: fixed;
+        top: -250px;
+        left: 0;
+        background: radial-gradient(closest-side, rgba(210, 190, 100, 0.25), transparent);
     }
     
     #footer {

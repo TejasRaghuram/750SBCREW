@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useState } from "react";
 import { Outlet, useNavigate, useLocation } from 'react-router-dom';
 import HomeIcon from "./../images/home_icon.png";
 import AboutIcon from "./../images/about_icon.png";
@@ -13,8 +13,49 @@ function Layout() {
     const navigate = useNavigate();
     const currentPage = useLocation().pathname;
 
+    let background = []
+    const [state, load] = useState(false);
+    let columns = Math.round((document.body.scrollWidth - 70) / 100) - 2;
+    if(document.body.scrollWidth <= 768)
+    {
+        columns += 2;
+    }
+    let x = 0;
+    let y = document.body.scrollHeight % 100 - 5;
+    for(let i = 0; i < (document.body.scrollHeight / 100); i++)
+    {
+        for(let j = 0; j < columns; j++)
+        {
+            background.push(<div class="background_dot" style={{
+                marginLeft: x, 
+                marginTop: y,
+            }}/>);
+            x += 100;
+        }
+        y += 100;
+        x = 0;
+    }
+    let background_left = 0;
+    if(document.body.scrollWidth > 768)
+    {
+        background_left = 70 + ((document.body.scrollWidth - 70) - 100 * (columns - 1)) / 2;
+    }
+    else
+    {
+        background_left = (document.body.scrollWidth - 100 * (columns - 1)) / 2;
+    }
+    window.addEventListener("load", () => {
+        load(!state)
+    });
+    window.addEventListener("resize", () => {
+        load(!state);
+    });
+
     return (
         <div>
+            <div id="background" style={{ left: background_left }}>
+                { background }
+            </div>
             <div id="navbar">
                 <img src={Logo} id="navbar_logo" alt=""/>
                 <div id="navbar_items">
@@ -56,6 +97,8 @@ function Layout() {
                 <div id="footer_separation"/>
                 <p id="footer_sbhs">SBHS ROBOTICS</p>
                 <p id="footer_sbcrew">750SBCREW</p>
+                <div id="footer_gradient"/>
+                <div id="footer_solid"/>
             </div>
         </div>
     );

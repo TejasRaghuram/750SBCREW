@@ -23,7 +23,7 @@
     margin-top: 20px;
     border-radius: 5px;
     background-color: rgba(255, 255, 255, 0);
-    transition: background-color 0.2s;
+    transition: 0.2s;
 }
     
 .navbar_item:hover {
@@ -95,6 +95,132 @@
     animation-duration: 10s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
+}
+
+#connect {
+    width: 500px;
+    height: 500px;
+    background-color: rgb(20, 30, 45);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    border-color: rgb(45, 60, 80);
+    position: absolute;
+    left: calc(70px + (100vw - 70px - 500px) / 2);
+    bottom: 0;
+}
+
+#connect_header {
+    margin-top: 16px;
+    text-align: center;
+}
+
+.connect_divider {
+    width: 460px;
+    height: 1px;
+    background-color: rgb(45, 60, 80);
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+#connect_subheader {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.form_input_prompt {
+    font-size: 12px;
+    line-height: 12px;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+.form_input {
+    width: 450px;
+    margin-left: 25px;
+    margin-top: 5px;
+    padding: 5px;
+    display: block;
+    background-color:rgb(15, 20, 30);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    border-color: rgb(45, 60, 80);
+}
+
+#form_message {
+    height: 100px;
+}
+
+#form_submit {
+    width: 150px;
+    height: 50px;
+    margin-left: 175px;
+    margin-top: 10px;
+    font-weight: bold;
+    background-color: rgb(15, 20, 30);
+    border-radius: 25px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(45, 60, 80);
+    transition: 0.2s;
+}
+
+#form_submit:hover {
+    background-color: rgb(35, 35, 25);
+    border-color: rgb(255, 255, 175);
+    cursor: pointer;
+}
+
+#connect_section_divider {
+    margin-top: 20px;
+}
+
+#connect_or {
+    width: 40px;
+    font-size: 14px;
+    position: relative;
+    left: 230px;
+    bottom: 9px;
+    background-color: rgb(20, 30, 45);
+    color: rgb(45, 60, 80);
+    text-align: center;
+}
+
+#instagram_button {
+    width: 250px;
+    height: 50px;
+    margin-left: 125px;
+    background-color: rgb(15, 20, 30);
+    border-radius: 25px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(45, 60, 80);
+    transition: 0.2s;
+}
+
+#instagram_button:hover {
+    background-color: rgb(35, 35, 25);
+    border-color: rgb(255, 255, 175);
+}
+
+#instagram_icon {
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    margin-left: 22px;
+    display: inline-block;
+}
+
+#instagram_text {
+    display: inline-block;
+    position: relative;
+    bottom: 11px;
+    left: 10px;
+    font-size: 14px;
+    font-weight: bold;
 }
     
 #footer {
@@ -193,10 +319,8 @@
     #top_gradient { 
         width: 100vw;
         height: 500px;
-        position: fixed;
         top: -250px;
         left: 0;
-        background: radial-gradient(closest-side, rgba(210, 190, 100, 0.25), transparent);
     }
     
     #footer {

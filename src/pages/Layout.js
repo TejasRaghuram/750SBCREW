@@ -6,6 +6,7 @@ import GalleryIcon from "./../images/gallery_icon.png";
 import SponsorIcon from "./../images/sponsor_icon.png";
 import Viking from "./../images/viking.svg";
 import Logo from "./../images/logo.svg";
+import Instagram from "./../images/instagram.png";
 import "./../styles/Layout.css";
 
 function Layout() {
@@ -13,8 +14,9 @@ function Layout() {
     const navigate = useNavigate();
     const currentPage = useLocation().pathname;
 
-    let background = []
     const [state, load] = useState(false);
+
+    let background = []
     let columns = Math.round((document.body.scrollWidth - 70) / 100) - 2;
     if(document.body.scrollWidth <= 768)
     {
@@ -44,6 +46,7 @@ function Layout() {
     {
         background_left = (document.body.scrollWidth - 100 * (columns - 1)) / 2;
     }
+
     window.addEventListener("load", () => {
         load(!state)
     });
@@ -93,6 +96,29 @@ function Layout() {
             </div>
             <div id="page">
                 <Outlet/>
+            </div>
+            <div id="connect">
+                <p id="connect_header">Connect With Us!</p>
+                <div class="connect_divider"/>
+                <p id="connect_subheader">Send Us A Message!</p>
+                <form className="contact-form">
+                    <p class="form_input_prompt">NAME:</p>
+                    <input type="text" name="from_name" class="form_input" placeholder="ENTER NAME"/>
+                    <p class="form_input_prompt">EMAIL:</p>
+                    <input type="email" name="from_email" class="form_input" placeholder="ENTER EMAIL"/>
+                    <p class="form_input_prompt">MESSAGE:</p>
+                    <textarea name="message" class="form_input" id="form_message" placeholder="ENTER MESSAGE"/>
+                    <input type="submit" id="form_submit" value="Send Message"/>
+                </form>
+                <div class="connect_divider" id="connect_section_divider"/>
+                <p id="connect_or">OR</p>
+                <a href="https://www.instagram.com/sbhs750/">
+                    <div id="instagram_button">
+                        <img src={Instagram} alt="" id="instagram_icon"/>
+                        <p id="instagram_text">Follow Us On Instagram</p>
+                    </div>
+                </a>
+                <p></p>
             </div>
             <div id="footer">
                 <div id="footer_separation"/>

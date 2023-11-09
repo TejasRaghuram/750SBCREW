@@ -84,7 +84,7 @@
     width: calc(100vw - 70px);
     height: 100vh;
     margin-left: 70px;
-    position: absolute;
+    position: fixed;
     background-image: url("./../images/dot.svg");
     background-size: 100px;
     animation: pan 10s linear infinite;
@@ -99,9 +99,23 @@
     border-width: 1px;
     border-radius: 5px;
     border-color: rgb(45, 60, 80);
-    position: absolute;
+    position: fixed;
     left: calc(70px + (100vw - 70px - 500px) / 2);
-    bottom: 0;
+    transition: 0.75s;
+    z-index: -2;
+}
+
+.connect_down {
+    bottom: -390px;
+}
+
+.connect_down:hover {
+    bottom: -375px;
+    cursor: pointer;
+}
+
+.connect_up {
+    bottom: 55px;
 }
 
 #connect_header {
@@ -220,6 +234,8 @@
 #footer {
     height: 60px;
     margin-left: 70px;
+    position: fixed;
+    bottom: 0;
 }
 
 #footer_separation {
@@ -232,7 +248,7 @@
 #footer_sbhs {
     width: calc(100vw - 95px);
     position: absolute;
-    left: 85px;
+    left: 25px;
     margin-top: 10px;
     font-size: 24px;
     color: rgb(130, 140, 155);
@@ -253,14 +269,14 @@
     width: calc(100vw - 70px);
     height: 50px;
     position: absolute;
-    bottom: 70px;
+    bottom: 60px;
     background-image: linear-gradient(0deg, rgba(15, 20, 30, 1), rgba(15, 20, 30, 0));
-    z-index: -1;
+    z-index: -3;
 }
 
 #footer_solid {
     width: calc(100vw - 70px);
-    height: 70px;
+    height: 60px;
     position: absolute;
     bottom: 0;
     background-color: rgb(15, 20, 30);
@@ -320,6 +336,31 @@
     #background {
         width: 100vw;
         margin-left: 0;
+    }
+
+    #connect {
+        width: calc(100vw - 40px);
+        left: 20px;
+    }
+
+    .connect_divider {
+        width: calc(100% - 40px);
+    }
+
+    .form_input {
+        width: calc(100% - 50px);
+    }
+
+    #form_submit {
+        margin-left: calc(50% - 75px);
+    }
+
+    #instagram_button {
+        margin-left: calc(50% - 125px);
+    }
+
+    #connect_or {
+        left: calc(50% - 20px);
     }
     
     #footer {

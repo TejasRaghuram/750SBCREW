@@ -1,4 +1,4 @@
-import { React } from "react";
+import { React, useState } from "react";
 import { Outlet, useNavigate, useLocation } from 'react-router-dom';
 import HomeIcon from "./../images/home_icon.png";
 import AboutIcon from "./../images/about_icon.png";
@@ -13,6 +13,15 @@ function Layout() {
 
     const navigate = useNavigate();
     const currentPage = useLocation().pathname;
+    const [connect, setConnect] = useState(false);
+
+    window.addEventListener("click", function(e) {   
+        if (document.getElementById("connect").contains(e.target)) {
+          setConnect(true);
+        } else{
+          setConnect(false);
+        }
+      });
 
     return (
         <div>
@@ -55,30 +64,30 @@ function Layout() {
             <div id="page">
                 <Outlet/>
             </div>
-            <div id="connect">
-                <p id="connect_header">Connect With Us!</p>
-                <div class="connect_divider"/>
-                <p id="connect_subheader">Send Us A Message!</p>
-                <form className="contact-form">
-                    <p class="form_input_prompt">NAME:</p>
-                    <input type="text" name="from_name" class="form_input" placeholder="ENTER NAME"/>
-                    <p class="form_input_prompt">EMAIL:</p>
-                    <input type="email" name="from_email" class="form_input" placeholder="ENTER EMAIL"/>
-                    <p class="form_input_prompt">MESSAGE:</p>
-                    <textarea name="message" class="form_input" id="form_message" placeholder="ENTER MESSAGE"/>
-                    <input type="submit" id="form_submit" value="Send Message"/>
-                </form>
-                <div class="connect_divider" id="connect_section_divider"/>
-                <p id="connect_or">OR</p>
-                <a href="https://www.instagram.com/sbhs750/">
-                    <div id="instagram_button">
-                        <img src={Instagram} alt="" id="instagram_icon"/>
-                        <p id="instagram_text">Follow Us On Instagram</p>
-                    </div>
-                </a>
-                <p></p>
-            </div>
             <div id="footer">
+                <div id="connect" class={ connect ? "connect_up":"connect_down" }>
+                    <p id="connect_header">Connect With Us!</p>
+                    <div class="connect_divider"/>
+                    <p id="connect_subheader">Send Us A Message!</p>
+                    <form className="contact-form">
+                        <p class="form_input_prompt">NAME:</p>
+                        <input type="text" name="from_name" class="form_input" placeholder="ENTER NAME"/>
+                        <p class="form_input_prompt">EMAIL:</p>
+                        <input type="email" name="from_email" class="form_input" placeholder="ENTER EMAIL"/>
+                        <p class="form_input_prompt">MESSAGE:</p>
+                        <textarea name="message" class="form_input" id="form_message" placeholder="ENTER MESSAGE"/>
+                        <input type="submit" id="form_submit" value="Send Message"/>
+                    </form>
+                    <div class="connect_divider" id="connect_section_divider"/>
+                    <p id="connect_or">OR</p>
+                    <a href="https://www.instagram.com/sbhs750/">
+                        <div id="instagram_button">
+                            <img src={Instagram} alt="" id="instagram_icon"/>
+                            <p id="instagram_text">Follow Us On Instagram</p>
+                        </div>
+                    </a>
+                    <p></p>
+                </div>
                 <div id="footer_separation"/>
                 <p id="footer_sbhs">SBHS ROBOTICS</p>
                 <p id="footer_sbcrew">750SBCREW</p>

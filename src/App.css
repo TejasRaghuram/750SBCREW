@@ -10,7 +10,3 @@ body {
   background-color: rgb(15, 20, 30);
   overflow-x: hidden;
 }
-
-.page {
-  min-height: calc(100vh - 60px);
-}

@@ -1,0 +1,27 @@
+#sponsor_title {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 64px;
+}
+
+#sponsor_subtitle {
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: center;
+}
+
+#sponsor_packet {
+    width: calc(100vh - 300px);
+    height: calc(100vh - 300px);
+    margin-top: 15px;
+    margin-left: calc(50% - 0.5 * (100vh - 300px));
+}
+
+@media (max-width: 768px) {
+
+    #sponsor_title {
+        margin-top: 80px;
+        font-size: 48px;
+    }
+
+}

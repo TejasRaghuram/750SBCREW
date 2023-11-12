@@ -1,0 +1,15 @@
+#error_content {
+    width: calc(100vw - 70px);
+    position: absolute;
+    top: calc(50% - 100px);
+}
+
+#error_title {
+    text-align: center;
+    font-size: 64px;
+}
+
+#error_subtitle {
+    text-align: center;
+    font-size: 24px;
+}

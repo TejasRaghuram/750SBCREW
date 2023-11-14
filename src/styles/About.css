@@ -1,0 +1,31 @@
+#about_title {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 64px;
+}
+
+#about_teams {
+    width: calc(100% - 70px);
+    margin-top: 20px;
+    font-size: 84px;
+    text-align: center;
+    position: absolute;
+}
+
+.about_selected {
+    color: #BDBD05;
+}
+
+.about_selectable:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+
+    #about_title {
+        margin-top: 80px;
+        font-size: 48px;
+    }
+
+}

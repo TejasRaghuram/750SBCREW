@@ -70,6 +70,8 @@
 }
 
 .about_section_content {
+    padding-left: 40px;
+    padding-right: 40px;
     text-align: center;
 }
 
@@ -80,8 +82,19 @@
 @media (max-width: 768px) {
 
     #about_title {
+        width: 100vw;
         margin-top: 80px;
         font-size: 48px;
+    }
+
+    #about_teams {
+        width: 100vw;
+    }
+
+    #about_image {
+        width: calc(100vw - 80px);
+        height: calc(2/3 * (100vw - 80px));
+        margin-left: 20px;
     }
 
 }

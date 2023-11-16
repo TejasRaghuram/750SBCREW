@@ -1,0 +1,24 @@
+#home_hero {
+    width: 100%;
+    height: 700px;
+}
+
+#home_logo {
+    width: 750px;
+    left: calc(50% - 341px);
+    position: absolute;
+}
+
+#home_title {
+    width: 750px;
+    left: calc(50% - 341px);
+    top: 275px;
+    position: absolute;
+}
+
+.home_title_text {
+    font-size: 100px;
+    line-height: 90px;
+    text-align: center;
+    text-shadow: black 0 0 50px;
+}

@@ -5,13 +5,13 @@
 
 #home_logo {
     width: 750px;
-    left: calc(50% - 341px);
+    left: calc(50% - 330px);
     position: absolute;
 }
 
 #home_title {
     width: 750px;
-    left: calc(50% - 341px);
+    left: calc(50% - 330px);
     top: 275px;
     position: absolute;
 }
@@ -53,7 +53,7 @@
     width: 300px;
     height: 35px;
     margin-left: calc(50% - 150px);
-    margin-top: 1%;
+    margin-top: 15px;
     padding-top: 15px;
     text-align: center;
     font-weight: bold;
@@ -73,4 +73,32 @@
 
 #home_spacing {
     height: 125px;
+}
+
+@media (max-width: 768px) {
+
+    #home_logo {
+        width: calc(100% - 80px);
+        left: 50px;
+        top: 30px;
+    }
+
+    #home_title {
+        width: 100%;
+        left: 0;
+        top: calc(100vw - 450px);
+    }
+
+    #home_image {
+        width: calc(100vw - 80px);
+        height: auto;
+        aspect-ratio: 1.75;
+        margin-left: 40px;
+    }
+
+    .home_title_text {
+        font-size: 64px;
+        line-height: 64px;
+    }
+
 }

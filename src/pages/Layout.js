@@ -1,5 +1,6 @@
 import { React, useState } from "react";
 import { Outlet, useNavigate, useLocation } from 'react-router-dom';
+import emailjs from "emailjs-com";
 import HomeIcon from "./../images/home_icon.png";
 import AboutIcon from "./../images/about_icon.png";
 import GalleryIcon from "./../images/gallery_icon.png";
@@ -69,7 +70,16 @@ function Layout() {
                     <p id="connect_header">Connect With Us!</p>
                     <div class="connect_divider"/>
                     <p id="connect_subheader">Send Us A Message!</p>
-                    <form className="contact-form">
+                    <form className="contact-form" onSubmit={(e) => {
+                        e.preventDefault();
+                        emailjs.sendForm('service_5rtgzmw', 'template_onovqgd', e.target, 'uglKAAh05rp_vIKtt')
+                            .then((result) => {
+                                alert("Success! One of our team members will reach out to you shortly.");
+                            }, (error) => {
+                                alert(error.text);
+                            });
+                        e.target.reset();
+                    }}>
                         <p class="form_input_prompt">NAME:</p>
                         <input type="text" name="from_name" class="form_input" placeholder="ENTER NAME"/>
                         <p class="form_input_prompt">EMAIL:</p>

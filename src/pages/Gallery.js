@@ -15,6 +15,9 @@ import "./../styles/Gallery.css";
 
 
 function Gallery() {
+    
+    window.scrollTo(0, 0);
+
     return (
         <div>
             <h1 id="gallery_title">PHOTO GALLERY</h1>

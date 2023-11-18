@@ -6,6 +6,8 @@ import "./../styles/Home.css";
 function Home() {
     const navigate = useNavigate();
 
+    window.scrollTo(0, 0);
+
     return (
         <div>
             <div id="home_hero">

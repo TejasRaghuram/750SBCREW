@@ -3,6 +3,9 @@ import SponsorshipPacket from "./../images/sponsorship.pdf";
 import "./../styles/Sponsor.css"
 
 function Sponsor() {
+
+    window.scrollTo(0, 0);
+    
     return (
         <div>
             <h1 id="sponsor_title">SPONSOR US!</h1>

@@ -353,6 +353,8 @@ function About() {
         }
     };
 
+    window.scrollTo(0, 0);
+
     return (
         <div>
             <h1 id="about_title">OUR TEAMS</h1>

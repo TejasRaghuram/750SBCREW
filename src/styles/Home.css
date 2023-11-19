@@ -78,15 +78,15 @@
 @media (max-width: 768px) {
 
     #home_logo {
-        width: calc(100% - 80px);
-        left: 50px;
-        top: 30px;
+        width: 350px;
+        left: calc(50% - 165px);
+        top: calc(50vh - 175px);
     }
 
     #home_title {
-        width: 100%;
+        width: 100vw;
         left: 0;
-        top: calc(100vw - 450px);
+        top: 275px;
     }
 
     #home_image {

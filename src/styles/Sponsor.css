@@ -24,4 +24,10 @@
         font-size: 48px;
     }
 
+    #sponsor_packet {
+        width: calc(100vw - 40px);
+        height: calc(100vw - 40px);
+        margin-left: 20px;
+    }
+
 }

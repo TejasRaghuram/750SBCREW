@@ -80,13 +80,13 @@
     #home_logo {
         width: 350px;
         left: calc(50% - 165px);
-        top: calc(50vh - 175px);
+        top: calc(50vh - 200px);
     }
 
     #home_title {
         width: 100vw;
         left: 0;
-        top: 275px;
+        top: calc(50vh - 125px);
     }
 
     #home_image {
